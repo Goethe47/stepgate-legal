@@ -2,20 +2,22 @@
 
 This folder contains a minimal static legal site for StepGate.
 
-## Files
-- index.html — entry page with links to Privacy Policy and Terms of Use
-- privacy.html — privacy policy
-- 	erms.html — terms of use
+## Pages
+- index.html — entry page with links to all legal documents
+- privacy.html — Privacy Policy
+- 	erms.html — Terms of Use
+- data-use.html — plain-language explanation of how StepGate uses data
 - styles.css — shared styling
 
 ## Local preview
 Open index.html in your browser.
 
 ## GitHub Pages deployment
-1. Push this stepgate-legal folder to a GitHub repository.
-2. Enable GitHub Pages for the repository (Settings → Pages → deploy from main / root).
-3. Your legal URLs will be:
-   - https://<username>.github.io/<repo>/privacy.html
-   - https://<username>.github.io/<repo>/terms.html
+1. Push this folder to a GitHub repository (public).
+2. Enable GitHub Pages (Settings → Pages → Deploy from main / root).
+3. Your URLs will be:
+   - https://goethe47.github.io/stepgate-legal/privacy.html
+   - https://goethe47.github.io/stepgate-legal/terms.html
+   - https://goethe47.github.io/stepgate-legal/data-use.html
 
-Use those URLs in your app store listings and in the app.
+Use these URLs in your app store listings and in the app.
