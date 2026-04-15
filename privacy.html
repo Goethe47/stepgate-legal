@@ -12,7 +12,7 @@
       <a class=back-link href=index.html>← Back</a>
       <h1>Privacy Policy</h1>
       <p class=lead>This policy explains how StepGate handles your data.</p>
-      <p class=meta>Last updated: 2026-03-31</p>
+      <p class=meta>Last updated: 2026-04-15</p>
     </header>
 
     <section>
@@ -23,8 +23,9 @@
     <section>
       <h2>What data StepGate accesses</h2>
       <ul>
-        <li><strong>App usage data</strong> such as usage duration and selected apps.</li>
-        <li><strong>Steps / activity data</strong> to calculate your daily goal and adaptive access.</li>
+        <li><strong>App usage data</strong> such as usage duration for selected controlled apps.</li>
+        <li><strong>Steps / activity data</strong> from Health Connect and/or supported on-device sources to calculate adaptive access.</li>
+        <li><strong>Permission states</strong> to determine whether required features can run.</li>
       </ul>
     </section>
 
@@ -32,25 +33,26 @@
       <h2>Permissions used</h2>
       <ul>
         <li><strong>Usage Access</strong> — read app usage for selected apps.</li>
-        <li><strong>Accessibility Service</strong> — enforce app blocking when limits are reached.</li>
+        <li><strong>Accessibility Service</strong> — detect launch of selected controlled apps and show the limit screen.</li>
         <li><strong>Activity Recognition / Health Connect</strong> — read step data.</li>
-        <li><strong>Overlay permission</strong> — show the block screen.</li>
+        <li><strong>Overlay permission</strong> — show the limit screen on top of controlled apps (when enabled).</li>
       </ul>
     </section>
 
     <section>
       <h2>How the data is used</h2>
       <ul>
-        <li>Calculate your baseline time from recent usage history.</li>
-        <li>Set your daily step goal based on your typical activity.</li>
-        <li>Determine available time for controlled apps each day.</li>
-        <li>Enforce blocking when the daily access limit is reached.</li>
+        <li>Calculate baseline access from recent usage history.</li>
+        <li>Adjust daily access after new step data arrives.</li>
+        <li>Determine available time for controlled apps.</li>
+        <li>Show a limit screen when a controlled app reaches its daily limit.</li>
       </ul>
     </section>
 
     <section>
       <h2>Where data is stored</h2>
       <p>StepGate stores data locally on your device. We do not send usage or step data to our servers.</p>
+      <p>Data may still be processed by core Android platform components that provide permissions and system APIs required for app functionality.</p>
     </section>
 
     <section>
@@ -60,7 +62,28 @@
 
     <section>
       <h2>Third-party services</h2>
-      <p>StepGate does not use third-party analytics or crash reporting services at this time.</p>
+      <p>StepGate does not use third-party analytics or ad SDKs at this time.</p>
+    </section>
+
+    <section>
+      <h2>What StepGate does not read</h2>
+      <ul>
+        <li>Messages, chats, or email contents</li>
+        <li>On-screen text in other apps</li>
+        <li>Keyboard input or passwords</li>
+        <li>Photos, files, or contacts</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Accessibility-specific disclosure</h2>
+      <p>Accessibility is used only to detect launch of selected controlled apps and show a limit screen when access is exhausted.</p>
+      <p>StepGate does not use Accessibility to read messages, extract text, capture keystrokes, or perform unrelated automated actions.</p>
+    </section>
+
+    <section>
+      <h2>Health Connect rationale</h2>
+      <p>When Health Connect is enabled, StepGate requests read access to step data only. This is used only to update step-based access logic in the app.</p>
     </section>
 
     <section>

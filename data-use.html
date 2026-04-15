@@ -12,22 +12,22 @@
       <a class=back-link href=index.html>← Back</a>
       <h1>How We Use Data</h1>
       <p class=lead>A plain-language explanation of why StepGate needs certain permissions.</p>
-      <p class=meta>Last updated: 2026-03-31</p>
+      <p class=meta>Last updated: 2026-04-15</p>
     </header>
 
     <section>
       <h2>Why StepGate needs app usage access</h2>
-      <p>StepGate reads usage data only to understand how much time is spent in the apps you choose to control. This lets us calculate your baseline time and enforce daily limits.</p>
+      <p>StepGate reads usage data only to track time in the apps you choose to control and detect when their limit is exhausted.</p>
     </section>
 
     <section>
       <h2>Why StepGate needs step/activity data</h2>
-      <p>Step data helps StepGate adjust your available time based on your movement. More movement means more of your usual app time becomes available.</p>
+      <p>Step data helps StepGate adjust available access after new step records arrive. Data may appear with delay because sources and Health Connect sync over time.</p>
     </section>
 
     <section>
       <h2>Why accessibility is needed</h2>
-      <p>Accessibility is used to detect when a controlled app is opened and to show the block screen when your limit is reached. It is not used to read your messages or content.</p>
+      <p>Accessibility is used only to detect when a controlled app is opened and to show the limit screen when your limit is reached. It is not used to read messages, screen text, keyboard input, or app content.</p>
     </section>
 
     <section>
@@ -37,7 +37,17 @@
 
     <section>
       <h2>What if I do not grant a permission?</h2>
-      <p>If a permission is not granted, StepGate will still run but some features may not work. For example, without step data we cannot adjust access based on movement.</p>
+      <p>If a permission is not granted, StepGate still runs, but some features are limited. For example, without step data we cannot update step-based access.</p>
+    </section>
+
+    <section>
+      <h2>What StepGate does not access</h2>
+      <ul>
+        <li>Messages or chat contents</li>
+        <li>On-screen text in other apps</li>
+        <li>Keyboard input or passwords</li>
+        <li>Photos, files, or contacts</li>
+      </ul>
     </section>
 
     <section>
