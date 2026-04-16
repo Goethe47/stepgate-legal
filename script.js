@@ -25,11 +25,8 @@
   }
 
   function injectLanguageSelector(currentDoc, currentLang) {
-    const main = document.querySelector("main.container");
-    if (!main) return;
-
     const holder = document.createElement("div");
-    holder.className = "lang-row";
+    holder.className = "lang-fab";
 
     const label = document.createElement("label");
     label.className = "lang-label";
@@ -64,7 +61,7 @@
 
     holder.appendChild(label);
     holder.appendChild(select);
-    main.insertBefore(holder, main.firstChild);
+    document.body.appendChild(holder);
   }
 
   function rewriteDocLinks(currentLang) {
