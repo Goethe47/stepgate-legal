@@ -1,109 +1,121 @@
-﻿<!doctype html>
-<html lang=en>
+<!doctype html>
+<html lang="ru">
 <head>
-  <meta charset=utf-8 />
-  <meta name=viewport content=width=device-width,initial-scale=1 />
-  <title>StepGate Privacy Policy</title>
-  <link rel=stylesheet href=styles.css />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Политика конфиденциальности StepGate</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
-<body>
-  <main class=container>
-    <header class=page-header>
-      <a class=back-link href=index.html>← Back</a>
-      <h1>Privacy Policy</h1>
-      <p class=lead>This policy explains how StepGate handles your data.</p>
-      <p class=meta>Last updated: 2026-04-15</p>
+<body data-title-key="privacy_title">
+  <main class="container">
+    <div class="lang-row">
+      <label class="lang-label" for="langSelect" data-i18n="langLabel">Язык</label>
+      <select class="lang-select" id="langSelect" aria-label="Language">
+        <option value="ru">Русский</option>
+        <option value="de">Deutsch</option>
+        <option value="es">Español</option>
+        <option value="pt-BR">Português (Brasil)</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+
+    <header class="page-header">
+      <a class="back-link" href="index.html" data-i18n="back">← Назад</a>
+      <h1 data-i18n="privacy_h1">Политика конфиденциальности</h1>
+      <p class="lead" data-i18n="privacy_lead">Как StepGate работает с вашими данными.</p>
+      <p class="meta" data-i18n="privacy_updated">Обновлено: 2026-04-16</p>
     </header>
 
     <section>
-      <h2>Introduction</h2>
-      <p>StepGate is a mobile app that helps you limit access to selected apps and regain access through movement. This policy explains what data the app accesses and how it is used.</p>
+      <h2 data-i18n="privacy_intro_h">Введение</h2>
+      <p data-i18n="privacy_intro_p">StepGate помогает ограничивать доступ к выбранным приложениям и возвращать доступ через активность.</p>
     </section>
 
     <section>
-      <h2>What data StepGate accesses</h2>
+      <h2 data-i18n="privacy_data_h">Какие данные использует StepGate</h2>
       <ul>
-        <li><strong>App usage data</strong> such as usage duration for selected controlled apps.</li>
-        <li><strong>Steps / activity data</strong> from Health Connect and/or supported on-device sources to calculate adaptive access.</li>
-        <li><strong>Permission states</strong> to determine whether required features can run.</li>
+        <li data-i18n="privacy_data_1">Время использования выбранных контролируемых приложений.</li>
+        <li data-i18n="privacy_data_2">Шаги/активность из Health Connect и/или доступных источников устройства.</li>
+        <li data-i18n="privacy_data_3">Статусы разрешений, нужные для корректной работы функций.</li>
       </ul>
     </section>
 
     <section>
-      <h2>Permissions used</h2>
+      <h2 data-i18n="privacy_perm_h">Какие разрешения используются</h2>
       <ul>
-        <li><strong>Usage Access</strong> — read app usage for selected apps.</li>
-        <li><strong>Accessibility Service</strong> — detect launch of selected controlled apps and show the limit screen.</li>
-        <li><strong>Activity Recognition / Health Connect</strong> — read step data.</li>
-        <li><strong>Overlay permission</strong> — show the limit screen on top of controlled apps (when enabled).</li>
+        <li data-i18n="privacy_perm_1">Доступ к статистике приложений — для учета времени в выбранных приложениях.</li>
+        <li data-i18n="privacy_perm_2">Accessibility Service — для обнаружения запуска выбранных приложений и показа экрана ограничения.</li>
+        <li data-i18n="privacy_perm_3">Activity Recognition / Health Connect — для чтения шагов.</li>
+        <li data-i18n="privacy_perm_4">Показ поверх других окон — для экрана ограничения поверх контролируемых приложений.</li>
       </ul>
     </section>
 
     <section>
-      <h2>How the data is used</h2>
+      <h2 data-i18n="privacy_use_h">Как используются данные</h2>
       <ul>
-        <li>Calculate baseline access from recent usage history.</li>
-        <li>Adjust daily access after new step data arrives.</li>
-        <li>Determine available time for controlled apps.</li>
-        <li>Show a limit screen when a controlled app reaches its daily limit.</li>
+        <li data-i18n="privacy_use_1">Расчет базового доступа по недавней истории использования.</li>
+        <li data-i18n="privacy_use_2">Обновление дневного доступа после поступления новых данных по шагам.</li>
+        <li data-i18n="privacy_use_3">Определение доступного времени в приложениях под контролем.</li>
+        <li data-i18n="privacy_use_4">Показ экрана ограничения при исчерпании дневного лимита.</li>
       </ul>
     </section>
 
     <section>
-      <h2>Where data is stored</h2>
-      <p>StepGate stores data locally on your device. We do not send usage or step data to our servers.</p>
-      <p>Data may still be processed by core Android platform components that provide permissions and system APIs required for app functionality.</p>
+      <h2 data-i18n="privacy_store_h">Где хранятся данные</h2>
+      <p data-i18n="privacy_store_p1">Данные хранятся локально на вашем устройстве. Мы не отправляем usage/steps на наши серверы.</p>
+      <p data-i18n="privacy_store_p2">Часть обработки может выполняться системными компонентами Android, которые предоставляют разрешения и API.</p>
     </section>
 
     <section>
-      <h2>Sharing with third parties</h2>
-      <p>We do not sell or share your personal data with third parties.</p>
+      <h2 data-i18n="privacy_share_h">Передача третьим лицам</h2>
+      <p data-i18n="privacy_share_p">Мы не продаем и не передаем персональные данные третьим лицам.</p>
     </section>
 
     <section>
-      <h2>Third-party services</h2>
-      <p>StepGate does not use third-party analytics or ad SDKs at this time.</p>
+      <h2 data-i18n="privacy_third_h">Сторонние сервисы</h2>
+      <p data-i18n="privacy_third_p">StepGate не использует рекламные SDK и стороннюю аналитику.</p>
     </section>
 
     <section>
-      <h2>What StepGate does not read</h2>
+      <h2 data-i18n="privacy_not_h">Что StepGate не читает</h2>
       <ul>
-        <li>Messages, chats, or email contents</li>
-        <li>On-screen text in other apps</li>
-        <li>Keyboard input or passwords</li>
-        <li>Photos, files, or contacts</li>
+        <li data-i18n="privacy_not_1">Сообщения, переписки, email</li>
+        <li data-i18n="privacy_not_2">Текст/контент на экране в других приложениях</li>
+        <li data-i18n="privacy_not_3">Ввод с клавиатуры и пароли</li>
+        <li data-i18n="privacy_not_4">Фото, файлы, контакты</li>
       </ul>
     </section>
 
     <section>
-      <h2>Accessibility-specific disclosure</h2>
-      <p>Accessibility is used only to detect launch of selected controlled apps and show a limit screen when access is exhausted.</p>
-      <p>StepGate does not use Accessibility to read messages, extract text, capture keystrokes, or perform unrelated automated actions.</p>
+      <h2 data-i18n="privacy_acc_h">Disclosure для Accessibility</h2>
+      <p data-i18n="privacy_acc_p1">Accessibility используется только для запуска выбранных приложений и показа экрана ограничения после лимита.</p>
+      <p data-i18n="privacy_acc_p2">StepGate не читает сообщения, не извлекает текст, не перехватывает ввод и не делает посторонние автоматические действия.</p>
     </section>
 
     <section>
-      <h2>Health Connect rationale</h2>
-      <p>When Health Connect is enabled, StepGate requests read access to step data only. This is used only to update step-based access logic in the app.</p>
+      <h2 data-i18n="privacy_hc_h">Health Connect</h2>
+      <p data-i18n="privacy_hc_p">При подключении Health Connect приложение запрашивает только чтение шагов для step-based логики.</p>
     </section>
 
     <section>
-      <h2>Data retention</h2>
-      <p>Data stays on your device until you delete the app data or uninstall StepGate.</p>
+      <h2 data-i18n="privacy_retention_h">Хранение данных</h2>
+      <p data-i18n="privacy_retention_p">Данные остаются на устройстве до удаления данных приложения или деинсталляции.</p>
     </section>
 
     <section>
-      <h2>How to delete your data</h2>
-      <p>You can remove StepGate’s data by clearing the app’s storage in system settings or by uninstalling the app.</p>
+      <h2 data-i18n="privacy_delete_h">Как удалить данные</h2>
+      <p data-i18n="privacy_delete_p">Очистите данные приложения в настройках системы или удалите StepGate.</p>
     </section>
 
     <section>
-      <h2>Children’s privacy</h2>
-      <p>StepGate is not directed to children under 13. If you are under the age required in your country to use the app independently, use it with a parent or legal guardian.</p>
+      <h2 data-i18n="privacy_children_h">Дети</h2>
+      <p data-i18n="privacy_children_p">StepGate не предназначен для детей младше 13 лет.</p>
     </section>
 
     <section>
-      <h2>Contact</h2>
-      <p>If you have questions about this policy, contact us at: <strong>burteloffluther@gmail.com</strong></p>
+      <h2 data-i18n="privacy_contact_h">Контакты</h2>
+      <p data-i18n="privacy_contact_p">Вопросы по политике: burteloffluther@gmail.com</p>
     </section>
   </main>
 </body>
