@@ -97,12 +97,18 @@
     });
   }
 
+  function isLanguageMetaText(text) {
+    const t = (text || "").trim();
+    return /^(Languages|Sprachen|Sprache|Idiomas|Idioma|Языки)\s*:/i.test(t);
+  }
+
   function removeLanguageMetaLines() {
     document.querySelectorAll(".meta").forEach((node) => {
-      const t = (node.textContent || "").trim();
-      if (/^(Languages|Sprachen|Sprache|Idiomas|Idioma|Языки)\s*:/i.test(t)) {
-        node.remove();
-      }
+      if (isLanguageMetaText(node.textContent)) node.remove();
+    });
+
+    document.querySelectorAll("header.hero p, header.hero div, header.hero li").forEach((node) => {
+      if (isLanguageMetaText(node.textContent)) node.remove();
     });
   }
 
@@ -113,7 +119,11 @@
 
     nodes.forEach((n) => {
       const original = n.nodeValue || "";
-      const cleaned = original.replace(/`r`n/g, "").replace(/\u0060r\u0060n/g, "");
+      const cleaned = original
+        .replace(/`r`n/g, "")
+        .replace(/\u0060r\u0060n/g, "")
+        .replace(/'r'n/g, "")
+        .replace(/`r\s*`n/g, "");
       if (cleaned !== original) n.nodeValue = cleaned;
     });
   }
