@@ -1,70 +1,59 @@
-<!doctype html>
-<html lang="ru">
+﻿<!doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Как StepGate использует данные</title>
+  <title>How StepGate Uses Data</title>
   <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
 </head>
-<body data-title-key="data_title">
+<body>
   <main class="container">
-    <div class="lang-row">
-      <label class="lang-label" for="langSelect" data-i18n="langLabel">Язык</label>
-      <select class="lang-select" id="langSelect" aria-label="Language">
-        <option value="ru">Русский</option>
-        <option value="de">Deutsch</option>
-        <option value="es">Español</option>
-        <option value="pt-BR">Português (Brasil)</option>
-        <option value="en">English</option>
-      </select>
-    </div>
-
     <header class="page-header">
-      <a class="back-link" href="index.html" data-i18n="back">← Назад</a>
-      <h1 data-i18n="data_h1">Как мы используем данные</h1>
-      <p class="lead" data-i18n="data_lead">Понятно и коротко, зачем StepGate нужны разрешения.</p>
-      <p class="meta" data-i18n="data_updated">Обновлено: 2026-04-16</p>
+      <a class="back-link" href="index.html">← Back</a>
+      <h1>How We Use Data</h1>
+      <p class="lead">Plain-language explanation of why StepGate needs certain permissions.</p>
+      <p class="meta">Languages: <a href="data-use.html">EN</a> · <a href="data-use.de.html">DE</a> · <a href="data-use.es.html">ES</a> · <a href="data-use.pt.html">PT</a></p>
+      <p class="meta">Last updated: 2026-04-16</p>
     </header>
 
     <section>
-      <h2 data-i18n="data_usage_h">Зачем нужен доступ к статистике приложений</h2>
-      <p data-i18n="data_usage_p">Чтобы учитывать время в приложениях под контролем и понимать, когда лимит исчерпан.</p>
+      <h2>Why app usage access is needed</h2>
+      <p>StepGate reads usage data only to track time in controlled apps and detect when their limit is exhausted.</p>
     </section>
 
     <section>
-      <h2 data-i18n="data_steps_h">Зачем нужны шаги</h2>
-      <p data-i18n="data_steps_p">Чтобы обновлять доступ после поступления новых записей шагов. Данные могут приходить с задержкой.</p>
+      <h2>Why step/activity data is needed</h2>
+      <p>Step data helps update available access after new records arrive. Data can appear with delay due to source and Health Connect sync behavior.</p>
     </section>
 
     <section>
-      <h2 data-i18n="data_acc_h">Зачем нужен Accessibility</h2>
-      <p data-i18n="data_acc_p">Только для определения запуска контролируемого приложения и показа экрана ограничения. Не для чтения контента.</p>
+      <h2>Why accessibility is needed</h2>
+      <p>Accessibility is used only to detect opening of controlled apps and show the limit screen. It is not used to read messages, screen text, keyboard input, or app content.</p>
     </section>
 
     <section>
-      <h2 data-i18n="data_device_h">Данные уходят с устройства?</h2>
-      <p data-i18n="data_device_p">Нет. StepGate хранит данные локально и не отправляет на наши серверы.</p>
+      <h2>Does data leave the device?</h2>
+      <p>No. StepGate stores this data locally and does not send usage/step data to servers.</p>
     </section>
 
     <section>
-      <h2 data-i18n="data_no_perm_h">Если разрешение не выдано</h2>
-      <p data-i18n="data_no_perm_p">Приложение работает частично. Некоторые функции будут ограничены.</p>
+      <h2>What if permission is not granted?</h2>
+      <p>StepGate still runs, but related features are limited. For example, without step data, step-based access updates are unavailable.</p>
     </section>
 
     <section>
-      <h2 data-i18n="data_not_h">Что StepGate не читает</h2>
+      <h2>What StepGate does not access</h2>
       <ul>
-        <li data-i18n="data_not_1">Сообщения и чаты</li>
-        <li data-i18n="data_not_2">Текст на экранах других приложений</li>
-        <li data-i18n="data_not_3">Ввод с клавиатуры и пароли</li>
-        <li data-i18n="data_not_4">Фото, файлы, контакты</li>
+        <li>Messages or chat contents</li>
+        <li>On-screen text in other apps</li>
+        <li>Keyboard input or passwords</li>
+        <li>Photos, files, or contacts</li>
       </ul>
     </section>
 
     <section>
-      <h2 data-i18n="data_contact_h">Контакты</h2>
-      <p data-i18n="data_contact_p">Вопросы по данным: burteloffluther@gmail.com</p>
+      <h2>Contact</h2>
+      <p>Questions: <strong>burteloffluther@gmail.com</strong></p>
     </section>
   </main>
 </body>
