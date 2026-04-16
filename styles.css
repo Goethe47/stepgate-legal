@@ -1,17 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap");
 
 :root {
-  --bg-0: #eef6f2;
-  --bg-1: #e8f0ff;
-  --bg-2: #fbf8ef;
-  --card: rgba(255, 255, 255, 0.82);
-  --card-solid: #ffffff;
-  --text: #10192c;
-  --muted: #4f5f73;
-  --accent: #137b4d;
-  --accent-2: #2f66d0;
-  --border: rgba(15, 35, 64, 0.12);
-  --shadow: 0 14px 34px rgba(16, 25, 44, 0.12);
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --text: #132238;
+  --muted: #5a6a7d;
+  --accent: #1a7d56;
+  --link: #275dc7;
+  --border: #dbe4ef;
+  --shadow: 0 8px 22px rgba(19, 34, 56, 0.08);
 }
 
 * { box-sizing: border-box; }
@@ -21,191 +18,144 @@ body {
   font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
   color: var(--text);
   line-height: 1.62;
-  background:
-    radial-gradient(1200px 520px at -10% -15%, #c8f0df 0%, transparent 62%),
-    radial-gradient(900px 420px at 110% -10%, #cfe0ff 0%, transparent 58%),
-    linear-gradient(145deg, var(--bg-0) 0%, var(--bg-1) 45%, var(--bg-2) 100%);
-  min-height: 100vh;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
-  background-size: 34px 34px;
-  mask-image: radial-gradient(circle at 50% 20%, #000 25%, transparent 85%);
-  opacity: 0.25;
+  background: var(--bg);
 }
 
 .container {
-  max-width: 880px;
+  max-width: 860px;
   margin: 0 auto;
-  padding: 36px 20px 54px;
+  padding: 28px 18px 50px;
 }
 
-.hero, .page-header {
-  margin-bottom: 24px;
+.hero,
+.page-header {
+  margin-bottom: 22px;
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 22px;
+  border-radius: 16px;
   box-shadow: var(--shadow);
-  backdrop-filter: blur(8px);
-  padding: 18px 20px;
-  animation: fadeSlide 360ms ease both;
+  padding: 16px 18px;
 }
 
 .eyebrow {
+  margin: 0 0 8px;
   color: var(--accent);
-  font-weight: 800;
+  font: 800 0.78rem "Manrope", "IBM Plex Sans", sans-serif;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  font-size: 0.78rem;
-  margin: 0 0 8px;
-  font-family: "Manrope", "IBM Plex Sans", sans-serif;
 }
 
 h1 {
-  font-family: "Manrope", "IBM Plex Sans", sans-serif;
-  font-size: clamp(1.72rem, 1.48rem + 1.2vw, 2.22rem);
   margin: 0 0 8px;
-  line-height: 1.14;
+  font: 800 clamp(1.68rem, 1.48rem + 0.95vw, 2.1rem) "Manrope", "IBM Plex Sans", sans-serif;
+  line-height: 1.15;
 }
 
-.lead {
-  color: var(--muted);
-  margin: 0 0 6px;
-}
+.lead { margin: 0 0 6px; color: var(--muted); }
 
-.meta {
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-.meta a {
-  color: var(--accent-2);
-  text-decoration: none;
-}
-
-.meta a:hover { text-decoration: underline; }
+.meta { margin: 0; color: var(--muted); font-size: 0.9rem; }
 
 .links {
   display: grid;
+  gap: 12px;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 14px;
-  margin: 22px 0 14px;
+  margin: 20px 0 14px;
 }
 
 .card-link {
   display: block;
-  padding: 16px 18px;
-  background: var(--card-solid);
+  padding: 14px 16px;
+  border-radius: 14px;
   border: 1px solid var(--border);
-  border-radius: 16px;
+  background: var(--card);
   color: var(--text);
-  text-decoration: none;
   font-weight: 700;
-  box-shadow: 0 8px 18px rgba(16, 25, 44, 0.08);
-  transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+  text-decoration: none;
+  box-shadow: 0 5px 14px rgba(19, 34, 56, 0.07);
+  transition: border-color 140ms ease, transform 140ms ease;
 }
 
 .card-link:hover {
-  border-color: rgba(19, 123, 77, 0.45);
-  transform: translateY(-3px);
-  box-shadow: 0 14px 28px rgba(16, 25, 44, 0.14);
+  border-color: #b9c9dc;
+  transform: translateY(-1px);
 }
 
 section {
-  background: var(--card);
+  margin-bottom: 10px;
+  padding: 14px 16px;
+  border-radius: 14px;
   border: 1px solid var(--border);
-  border-radius: 16px;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 9px 22px rgba(16, 25, 44, 0.08);
-  padding: 16px 18px;
-  margin-bottom: 12px;
-  animation: fadeSlide 380ms ease both;
+  background: var(--card);
 }
 
 section h2 {
   margin: 0 0 8px;
-  font-size: 1.08rem;
-  font-family: "Manrope", "IBM Plex Sans", sans-serif;
+  font: 700 1.05rem "Manrope", "IBM Plex Sans", sans-serif;
 }
 
 ul { margin: 8px 0 0 18px; }
 
 .back-link {
-  color: var(--accent-2);
-  text-decoration: none;
+  color: var(--link);
   font-weight: 700;
-  font-size: 0.92rem;
+  text-decoration: none;
 }
 
 .back-link:hover { text-decoration: underline; }
 
-.footer {
-  color: var(--muted);
-  font-size: 0.9rem;
-  padding: 4px 2px;
-}
+.footer { color: var(--muted); font-size: 0.9rem; }
 
 .lang-fab {
   position: fixed;
-  top: 14px;
-  right: 14px;
-  z-index: 30;
+  top: 12px;
+  right: 12px;
+  z-index: 40;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(16, 25, 44, 0.14);
-  border-radius: 14px;
-  padding: 8px 10px;
-  box-shadow: 0 12px 26px rgba(16, 25, 44, 0.16);
-  backdrop-filter: blur(8px);
+  gap: 8px;
+  padding: 7px 9px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(19, 34, 56, 0.12);
 }
 
 .lang-label {
   color: var(--muted);
-  font-size: 0.83rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  line-height: 1;
 }
 
 .lang-select {
-  border: 1px solid rgba(16, 25, 44, 0.2);
+  min-width: 144px;
+  border-radius: 10px;
+  border: 1px solid #c8d5e4;
   background: #fff;
   color: var(--text);
-  border-radius: 10px;
   padding: 6px 10px;
   font-size: 0.86rem;
   font-weight: 600;
   outline: none;
-  min-width: 148px;
 }
 
 .lang-select:focus-visible {
-  border-color: var(--accent-2);
-  box-shadow: 0 0 0 3px rgba(47, 102, 208, 0.16);
+  border-color: var(--link);
+  box-shadow: 0 0 0 3px rgba(39, 93, 199, 0.14);
 }
 
-@keyframes fadeSlide {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+@media (max-width: 640px) {
+  .container { padding: 68px 12px 34px; }
+  .lang-fab { top: 8px; right: 8px; }
+  .lang-select { min-width: 124px; }
 }
 
-@media (max-width: 700px) {
-  .lang-fab {
-    right: 10px;
-    top: 10px;
-    padding: 7px 8px;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
-  .lang-select { min-width: 122px; }
-}
-
-@media (max-width: 600px) {
-  .container { padding: 74px 14px 34px; }
 }

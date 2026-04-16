@@ -1,8 +1,9 @@
 (function () {
   const STORAGE_KEY = "stepgate_legal_lang";
-  const SUPPORTED = ["en", "de", "es", "pt"];
+  const SUPPORTED = ["ru", "en", "de", "es", "pt"];
 
   const LABELS = {
+    ru: { label: "Язык" },
     en: { label: "Language" },
     de: { label: "Sprache" },
     es: { label: "Idioma" },
@@ -10,7 +11,7 @@
   };
 
   function parseFile(name) {
-    const m = name.match(/^(index|privacy|terms|data-use)(?:\.(de|es|pt))?\.html$/);
+    const m = name.match(/^(index|privacy|terms|data-use)(?:\.(ru|de|es|pt))?\.html$/);
     if (!m) return null;
     return { doc: m[1], lang: m[2] || "en" };
   }
@@ -21,7 +22,7 @@
 
   function preferredLang() {
     const stored = localStorage.getItem(STORAGE_KEY);
-    return SUPPORTED.includes(stored) ? stored : "en";
+    return SUPPORTED.includes(stored) ? stored : "ru";
   }
 
   function injectLanguageSelector(currentDoc, currentLang) {
@@ -39,6 +40,7 @@
     select.setAttribute("aria-label", "Language");
 
     const options = [
+      { value: "ru", text: "Русский" },
       { value: "en", text: "English" },
       { value: "de", text: "Deutsch" },
       { value: "es", text: "Español" },
@@ -70,6 +72,10 @@
       "privacy.html": fileFor("privacy", currentLang),
       "terms.html": fileFor("terms", currentLang),
       "data-use.html": fileFor("data-use", currentLang),
+      "index.ru.html": fileFor("index", currentLang),
+      "privacy.ru.html": fileFor("privacy", currentLang),
+      "terms.ru.html": fileFor("terms", currentLang),
+      "data-use.ru.html": fileFor("data-use", currentLang),
       "index.de.html": fileFor("index", currentLang),
       "privacy.de.html": fileFor("privacy", currentLang),
       "terms.de.html": fileFor("terms", currentLang),
@@ -91,6 +97,15 @@
     });
   }
 
+  function removeLanguageMetaLines() {
+    document.querySelectorAll(".meta").forEach((node) => {
+      const t = (node.textContent || "").trim();
+      if (/^(Languages|Sprachen|Idiomas|Idioma|Языки)\s*:/i.test(t)) {
+        node.remove();
+      }
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     const file = window.location.pathname.split("/").pop() || "index.html";
     const parsed = parseFile(file);
@@ -106,6 +121,7 @@
 
     localStorage.setItem(STORAGE_KEY, currentLang);
     rewriteDocLinks(currentLang);
+    removeLanguageMetaLines();
     injectLanguageSelector(doc, currentLang);
   });
 })();
