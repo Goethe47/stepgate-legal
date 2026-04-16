@@ -100,9 +100,21 @@
   function removeLanguageMetaLines() {
     document.querySelectorAll(".meta").forEach((node) => {
       const t = (node.textContent || "").trim();
-      if (/^(Languages|Sprachen|Idiomas|Idioma|Языки)\s*:/i.test(t)) {
+      if (/^(Languages|Sprachen|Sprache|Idiomas|Idioma|Языки)\s*:/i.test(t)) {
         node.remove();
       }
+    });
+  }
+
+  function removeGarbageArtifacts() {
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+
+    nodes.forEach((n) => {
+      const original = n.nodeValue || "";
+      const cleaned = original.replace(/`r`n/g, "").replace(/\u0060r\u0060n/g, "");
+      if (cleaned !== original) n.nodeValue = cleaned;
     });
   }
 
@@ -121,6 +133,7 @@
 
     localStorage.setItem(STORAGE_KEY, currentLang);
     rewriteDocLinks(currentLang);
+    removeGarbageArtifacts();
     removeLanguageMetaLines();
     injectLanguageSelector(doc, currentLang);
   });
