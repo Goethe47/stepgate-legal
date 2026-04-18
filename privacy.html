@@ -12,7 +12,7 @@
     <header class="page-header">
       <a class="back-link" href="index.html">← Back</a>
       <h1>Privacy Policy</h1>
-      <p class="lead">This policy explains how StepGate handles your data.</p><p class="meta">Last updated: 2026-04-16</p>
+      <p class="lead">This policy explains how StepGate handles your data.</p><p class="meta">Last updated: 2026-04-19</p>
     </header>
 
     <section>
@@ -24,7 +24,8 @@
       <h2>Data accessed</h2>
       <ul>
         <li><strong>App usage data</strong> for selected controlled apps.</li>
-        <li><strong>Step/activity data</strong> from Health Connect and/or supported on-device sources.</li>
+        <li><strong>Step totals</strong> from Health Connect (primary source).</li>
+        <li><strong>Activity Recognition status</strong> for temporary on-device sensor fallback when Health Connect data is delayed.</li>
         <li><strong>Permission states</strong> required for app features.</li>
       </ul>
     </section>
@@ -34,7 +35,8 @@
       <ul>
         <li><strong>Usage Access</strong> — to read usage for selected apps.</li>
         <li><strong>Accessibility Service</strong> — to detect launch of selected apps and show the limit screen.</li>
-        <li><strong>Activity Recognition / Health Connect</strong> — to read step data.</li>
+        <li><strong>Health Connect</strong> — to read step totals.</li>
+        <li><strong>Activity Recognition</strong> — to allow temporary on-device step sensor fallback when Health Connect data is delayed.</li>
         <li><strong>Overlay permission</strong> — to show the limit screen over controlled apps (when enabled).</li>
       </ul>
     </section>
@@ -72,8 +74,9 @@
     </section>
 
     <section>
-      <h2>Health Connect rationale</h2>
-      <p>When Health Connect is enabled, StepGate requests read access to step data only. This is used only for step-based access logic.</p>
+      <h2>Health Connect and sensor fallback</h2>
+      <p>When Health Connect is enabled, StepGate requests read access to step data only. Health Connect remains the primary source of truth for steps.</p>
+      <p>If Health Connect data is temporarily delayed, StepGate can use on-device sensor fallback for short-term updates.</p>
     </section>
 
     <section>
