@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -12,23 +12,24 @@
     <header class="page-header">
       <a class="back-link" href="index.html">← Back</a>
       <h1>How We Use Data</h1>
-      <p class="lead">Plain-language explanation of why StepGate needs certain permissions.</p><p class="meta">Last updated: 2026-04-19</p>
+      <p class="lead">Plain-language explanation of why StepGate needs certain permissions.</p>
+      <p class="meta">Last updated: 2026-05-10</p>
     </header>
 
     <section>
       <h2>Why app usage access is needed</h2>
-      <p>StepGate reads usage data only to track time in controlled apps and detect when their limit is exhausted.</p>
+      <p>StepGate reads usage data only to track time in selected controlled apps and detect when access runs out.</p>
     </section>
 
     <section>
-      <h2>Why step/activity data is needed</h2>
-      <p>StepGate reads step totals from Health Connect as the primary source. Data can appear with delay due to source app and Health Connect sync behavior.</p>
-      <p>When Health Connect data is delayed, StepGate can temporarily use on-device sensor fallback if Activity Recognition is granted.</p>
+      <h2>Why steps / activity are needed</h2>
+      <p>StepGate can count steps with the phone sensor when Activity Recognition is granted.</p>
+      <p>Health Connect is optional. If you connect it, StepGate can use external step history; sync may still be delayed by source apps.</p>
     </section>
 
     <section>
-      <h2>Why accessibility is needed</h2>
-      <p>Accessibility is used only to detect opening of controlled apps and show the limit screen. It is not used to read messages, screen text, keyboard input, or app content.</p>
+      <h2>Why display over other apps is needed</h2>
+      <p>StepGate uses display-over-apps permission only to show the limit screen over selected controlled apps. It does not read messages, screen text, keyboard input, or app content.</p>
     </section>
 
     <section>
@@ -58,10 +59,3 @@
   </main>
 </body>
 </html>
-
-
-
-
-
-
-
