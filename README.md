@@ -1,23 +1,29 @@
 ﻿# StepGate Legal Pages
 
-This folder contains a minimal static legal site for StepGate.
+Static legal pages for StepGate.
 
 ## Pages
-- index.html — entry page with links to all legal documents
-- privacy.html — Privacy Policy
-- 	erms.html — Terms of Use
-- data-use.html — plain-language explanation of how StepGate uses data
-- styles.css — shared styling
+- `index.html` — entry page with links to legal documents
+- `privacy.html` — Privacy Policy
+- `terms.html` — Terms of Use
+- `data-use.html` — plain-language permission and data-use explanation
+
+Localized pages are available for Russian (`*.ru.html`), Spanish (`*.es.html`), German (`*.de.html`), and Portuguese (`*.pt.html`).
+
+## Product/legal notes
+- StepGate is a paid Google Play app.
+- There are no ads, no subscriptions, and no in-app store.
+- Google Play handles paid-app purchase flow and standard refund requests where available.
+- StepGate stores app usage, selected app list, steps, and permission state locally on the device.
+- StepGate does not send step data, selected apps, or app usage data to StepGate servers.
 
 ## Local preview
-Open index.html in your browser.
+Open `index.html` in your browser.
 
 ## GitHub Pages deployment
-1. Push this folder to a GitHub repository (public).
-2. Enable GitHub Pages (Settings → Pages → Deploy from main / root).
-3. Your URLs will be:
-   - https://goethe47.github.io/stepgate-legal/privacy.html
-   - https://goethe47.github.io/stepgate-legal/terms.html
-   - https://goethe47.github.io/stepgate-legal/data-use.html
-
-Use these URLs in your app store listings and in the app.
+1. Push this repository to GitHub.
+2. Enable GitHub Pages: Settings -> Pages -> Deploy from main / root.
+3. Use these URLs in Play Console and the app:
+   - `https://goethe47.github.io/stepgate-legal/privacy.html`
+   - `https://goethe47.github.io/stepgate-legal/terms.html`
+   - `https://goethe47.github.io/stepgate-legal/data-use.html`
