@@ -5,20 +5,17 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Wie StepGate Daten nutzt</title>
   <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js?v=20260417f"></script>
+  <script defer src="script.js?v=20260520a"></script>
 </head>
 <body>
   <main class="container">
-    <header class="page-header">
-      <a class="back-link" href="index.de.html">← Zurück</a>
-      <h1>Wie wir Daten nutzen</h1>
-      <p class="lead">Verständliche Erklärung, warum StepGate bestimmte Berechtigungen braucht.</p>
-      <p class="meta">Letzte Aktualisierung: 2026-06-09</p>
-    </header>
-    <section><h2>Warum App-Nutzungszugriff nötig ist</h2><p>StepGate erfasst Nutzungszeit nur in ausgewählten Apps und erkennt, wenn der Zugriff aufgebraucht ist.</p></section>
-    <section><h2>Warum Schritte / Aktivität nötig sind</h2><p>StepGate kann Schritte mit dem Telefonsensor zählen, wenn Körperliche Aktivität erlaubt ist.</p><p>Health Connect ist optional. Wenn du es verbindest, kann StepGate externe Schritt-Historie nutzen; die Synchronisierung kann verzögert sein.</p></section>
+    <header class="page-header"><a class="back-link" href="index.de.html">← Zurück</a><h1>Wie wir Daten nutzen</h1><p class="lead">Verständliche Erklärung, warum StepGate bestimmte Berechtigungen braucht.</p><p class="meta">Letzte Aktualisierung: 2026-06-09</p></header>
+    <section><h2>Warum App-Nutzungszugriff nötig ist</h2><p>StepGate liest Nutzungsdaten nur, um die aktuelle Vordergrund-App zu erkennen, Zeit in ausgewählten Apps zu messen und zu wissen, wann der Zugriff aufgebraucht ist.</p></section>
+    <section><h2>Warum Schritte / Aktivität nötig sind</h2><p>StepGate kann Schritte mit dem Telefonsensor zählen, wenn die Berechtigung Körperliche Aktivität erteilt ist.</p><p>Health Connect ist optional. Wenn du es verbindest, nutzt StepGate nur READ_STEPS für Schrittzahl und Schritt-Historie. StepGate schreibt nicht in Health Connect und nutzt keinen Health-Connect-Zugriff im Hintergrund; die Synchronisierung durch Quell-Apps kann verzögert sein.</p><p>Wenn du beim ersten Einrichten geschätzte Schritte manuell eingibst, speichert StepGate diese Schätzung nur lokal und nur zur Berechnung des Zugriffs für diesen Tag.</p></section>
     <section><h2>Warum Anzeige über anderen Apps nötig ist</h2><p>StepGate nutzt diese Berechtigung nur, um den Limit-Bildschirm über ausgewählten Apps anzuzeigen. Es liest keine Nachrichten, Bildschirmtexte, Tastatureingaben oder App-Inhalte.</p></section>
-    <section><h2>Verlassen Daten das Gerät?</h2><p>Nein. StepGate speichert diese Daten lokal und sendet keine Nutzungs- oder Schrittdaten an Server.</p><p>StepGate nutzt keine Werbung, Tracker oder Analyse-SDKs.</p><p>Um lokale StepGate-Daten zu löschen, deinstalliere die App oder lösche die App-Daten in den Android-Einstellungen.</p></section>
+    <section><h2>Warum Benachrichtigungen und Hintergrundarbeit nötig sind</h2><p>StepGate nutzt eine Vordergrundbenachrichtigung, damit der Schutz sichtbar bleibt, während Android Hintergrundüberwachung erlaubt. Akku- und Autostart-Einstellungen können helfen, den Schutz nach einem Neustart wiederherzustellen oder im Hintergrund aktiv zu halten.</p></section>
+    <section><h2>Verlassen Daten das Gerät?</h2><p>Nein. StepGate speichert diese Daten lokal und sendet keine Nutzungsdaten, Listen ausgewählter Apps, Schritte oder Health-Connect-Daten an StepGate-Server.</p><p>StepGate verkauft, teilt oder überträgt diese Daten nicht an Dritte. StepGate nutzt keine Werbung, Tracker, Analyse-SDKs, Crash-Reporting-SDKs, Firebase, Sentry oder AdMob.</p><p>Um lokale StepGate-Daten zu löschen, deinstalliere die App oder lösche die App-Daten in den Android-Einstellungen.</p><p>Rechtliche Seiten werden in deinem externen Browser geöffnet.</p></section>
+    <section><h2>Wenn eine Berechtigung fehlt</h2><p>StepGate öffnet sich weiterhin, aber zugehörige Funktionen sind eingeschränkt. Ohne Nutzungszugriff kann StepGate die Zeit in ausgewählten Apps nicht messen. Ohne Anzeige über anderen Apps kann StepGate den Limit-Bildschirm nicht über ausgewählten Apps anzeigen. Ohne Schrittdaten werden schrittbasierte Zugriffsänderungen nicht aktualisiert.</p></section>
     <section><h2>Was StepGate nicht liest</h2><ul><li>Nachrichten oder Chats</li><li>Bildschirmtext in anderen Apps</li><li>Tastatureingaben oder Passwörter</li><li>Fotos, Dateien oder Kontakte</li></ul></section>
     <section><h2>Kontakt</h2><p>Fragen: <strong>burteloffluther@gmail.com</strong></p></section>
   </main>
