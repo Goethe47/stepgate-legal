@@ -11,11 +11,12 @@ Static legal pages for StepGate.
 Localized pages are available for Russian (`*.ru.html`), Spanish (`*.es.html`), German (`*.de.html`), and Portuguese (`*.pt.html`).
 
 ## Product/legal notes
-- StepGate is a paid Google Play app.
-- There are no ads, no subscriptions, and no in-app store.
-- Google Play handles paid-app purchase flow and standard refund requests where available.
+- StepGate is a free Google Play app. The free version protects one selected app.
+- An optional one-time `StepGate Premium` in-app purchase unlocks protection for unlimited apps. There are no ads or subscriptions.
+- Google Play Billing handles the Premium purchase, ownership restoration, purchase records, taxes, and standard refund requests where available.
 - StepGate stores app usage, selected app list, steps, and permission state locally on the device.
 - StepGate does not send step data, selected apps, or app usage data to StepGate servers.
+- Internet access is used for Google Play Billing product information, purchases, acknowledgement, and ownership restoration.
 
 ## Local preview
 Open `index.html` in your browser.
